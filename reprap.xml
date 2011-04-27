@@ -1,5 +1,32 @@
 <?xml version="1.1" encoding="utf-8"?>
 <machines>
+
+<machine experimental="1">
+               <name>Mendel with Mega/RAMPS Electronics (115200 baud)</name>
+               <geometry type="cartesian">
+                       <axis id="x" length="200" maxfeedrate="5000" scale="47.069852" endstops="min"/>  
+                       <axis id="y" length="200" maxfeedrate="5000" scale="47.0698523" endstops="max"/>  
+                       <axis id="z" length="140" maxfeedrate="150" scale="160" endstops="min"/> 
+               </geometry>
+               <tools>
+        <tool name="Stepper-based extruder" type="extruder" material="abs" motor="true" floodcoolant="false" mistcoolant="false" fan="true" valve="false"
+        collet="false" heater="true" motor_steps="3200" heatedplatform="false" default_rpm="5.5"/>
+               </tools>
+               <clamps></clamps>
+               <help name="RepRap Help" url="http://www.reprap.org/ReplicatorG"></help>
+               <driver name="reprap5d">
+                       <rate>115200</rate>
+                        <parity>8</parity>
+<pulserts>false</pulserts> 
+<waitforstart enabled="true" timeout="1000" retries="3"></waitforstart>
+<fived>true</fived>
+               </driver>
+               <warmup>
+               </warmup>
+               <cooldown>
+               </cooldown>
+       </machine>
+
         <machine experimental="1">
                 <name>Mendel with Gen 3 Electronics (19200 Baud)</name>
                 <geometry type="cartesian">
